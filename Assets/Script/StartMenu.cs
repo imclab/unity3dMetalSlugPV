@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//菜单脚本
 public class StartMenu : MonoBehaviour {
 
 	// Use this for initialization
+    public string sceneName = "SelectCharacter";
 	void Start () {
 	
 	}
@@ -12,4 +13,8 @@ public class StartMenu : MonoBehaviour {
 	void Update () {
 	
 	}
+    public void LoadScene()
+    {
+        Application.LoadLevel(sceneName);
+    }
 }
