@@ -26,11 +26,11 @@ public class StartSelectCharacter : MonoBehaviour
             selectIndex = 0;
             SelectList[selectIndex].SetActive(true);
         }
-        if (Input.GetKeyDown(keyBit.shoot))//按下选中角色键（射击键）
+        if (Input.GetKeyDown(keyBit.shoot)&&selected!=true)//按下选中角色键（射击键）
         {
             selected = true;
             playerData.character = arrCharacterType[selectIndex];
-            Debug.Log(playerData.character);
+            PlaySelectAnim();//选中后的动画
         }
         if (selected == false)
         {
@@ -47,6 +47,10 @@ public class StartSelectCharacter : MonoBehaviour
                 SetSelect();
             }
         }
+    }
+    void PlaySelectAnim()
+    {
+
     }
     void SetSelect()
     {
